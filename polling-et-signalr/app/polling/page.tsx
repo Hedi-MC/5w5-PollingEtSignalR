@@ -40,7 +40,7 @@ export default function Home() {
     // TODO: UNE FOIS QUE VOUS AVEZ TESTER AVEC DEUX CLIENTS: Utiliser le polling pour mettre la liste de tasks à jour chaque seconde
     let result = await axios.get<UselessTask[]>(apiUrl+'UselessTasks/GetAll/')
     setTasks(result.data);
-    setTimeout(updateTasks, 1000);
+    setTimeout(updateTasks, 1000); ///Permet d'update intermitently les taches pour chaque clients histoire que ca sync -H
 
   }
 
